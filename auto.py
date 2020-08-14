@@ -7,10 +7,10 @@ def sign_up():
     file_path = input('请输入路径:')  
     driver = webdriver.Chrome()
     driver.set_page_load_timeout(10)
-    driver.get('https://etax.zhejiang.chinatax.gov.cn/zjgfdzswj/main/index.html')#通过谷歌浏览器的驱动获取网址并打开
+    driver.get('https://etax.*******.chinatax.gov.cn/zjgfdzswj/main/index.html')#通过谷歌浏览器的驱动获取网址并打开
     driver.find_element_by_id('wybs').click()
     time.sleep(65)
-    driver.get('https://etax.zhejiang.chinatax.gov.cn/zjgfzjdzswjsbweb/pages/sb/nssb/sb_nssb.html')
+    driver.get('https://etax.zhejiang.*******.gov.cn/zjgfzjdzswjsbweb/pages/sb/nssb/sb_nssb.html')
     driver.find_element_by_link_text('财务报表（小企业会计准则）').click()
     wb = xw.Book(file_path)#文件的路径获取
     sht = wb.sheets['Recovered_Sheet1']#获取要控制表单的名字
